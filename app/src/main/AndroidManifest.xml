@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.id.ghodel.intentfilter">
+
+    <application
+        android:allowBackup="true"
+        android:name="com.id.ghodel.intentfilter.App"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:resizeableActivity="false">
+
+        <activity
+            android:name="com.id.ghodel.intentfilter.activity.SplashActivity"
+            android:theme="@style/AppTheme.Launcher"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity> 
+        
+		<activity
+            android:name="com.id.ghodel.intentfilter.activity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+					
+                <data android:pathPattern=".*\\.swb" />
+                <data android:pathPattern=".*\\..*\\.swb" />
+                <data android:pathPattern=".*\\..*\\..*\\.swb" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.swb" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.swb" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.swb" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.swb" />
+				<data android:pathPattern=".*\\.txt" />
+                <data android:pathPattern=".*\\..*\\.txt" />
+                <data android:pathPattern=".*\\..*\\..*\\.txt" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.txt" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.txt" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.txt" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.txt" />
+				<data android:pathPattern=".*\\.java" />
+                <data android:pathPattern=".*\\..*\\.java" />
+                <data android:pathPattern=".*\\..*\\..*\\.java" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.java" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.java" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.java" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.java" />
+				<data android:pathPattern=".*\\.xml" />
+                <data android:pathPattern=".*\\..*\\.xml" />
+                <data android:pathPattern=".*\\..*\\..*\\.xml" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.xml" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.xml" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.xml" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.xml" />
+					
+            </intent-filter>
+			
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<action android:name="com.yourapppackage.LAUNCH" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="ghodelapp"/>
+			</intent-filter>
+			
+        </activity>
+		
+        <activity
+            android:label="App Crash"
+            android:name="com.id.ghodel.intentfilter.util.CrashHandler$CrashActiviy"
+            android:screenOrientation="portrait"/>
+        
+        
+      <meta-data
+          android:name="android.max_aspect"
+          android:value="4.0"/>
+          
+    </application>
+	
+</manifest>
